@@ -1,0 +1,268 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+a {
+text-decoration: none;
+color: #1E1E23;
+opacity:1;
+font-family: 'work sans', sans serif;
+font-size: 1.5em;
+font-weight: 400;
+transition: 200ms;
+}
+
+a:hover {
+opacity:0.5;
+}
+
+#initials {
+background-color: #1E1E23;
+color: white;
+font-family: 'Caveat', cursive;
+font-size: 2em;
+align-self: center;
+margin-left: 5px;
+}
+
+ul {
+padding: 0;
+list-style-type: none;
+}
+
+header {
+height: 65px;
+position: sticky;
+top:0px;
+}
+
+nav {
+display: flex;
+background-color: #1E1E23;
+height: 65px;
+justify-content: space-between;
+}
+
+#menuToggle {
+display: flex;
+flex-direction: column;
+position: relative;
+align-items: flex-end;
+margin-right: 5px;
+top: 25px;
+z-index: 1;
+-webkit-user-select: none;
+user-select: none;
+}
+
+#menuToggle input
+{
+display: flex;
+width: 30px;
+height: 30px;
+cursor: pointer;
+position:absolute;
+opacity: 0;
+z-index: 3;
+transform: translateX(3px) translateY(-4px);
+}
+
+#menuToggle input:checked
+{
+display: flex;
+width: 30px;
+height: 30px;
+cursor: pointer;
+position:absolute;
+opacity: 0;
+z-index: 3;
+transform: translateY(-10px);
+}
+
+#menuToggle span
+{
+display: flex;
+width: 29px;
+height: 2px;
+margin-bottom: 5px;
+position: relative;
+background: #ffffff;
+border-radius: 3px;
+z-index: 2;
+transform-origin: 5px 0px;
+transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+            background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+            opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+opacity: 1;
+transform: rotate(45deg) translate(-3px, -1px);
+background: #36383F;
+}
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+opacity: 0;
+transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+display: none;
+position: absolute;
+width: 50vw;
+height: 87vh;
+box-shadow: 0 0 10px #85888C;
+margin: -50px -5px 0px 0px;
+padding: 50px;
+padding-top: 125px;
+background-color: #F5F6FA;
+-webkit-font-smoothing: antialiased;
+transform-origin: 0% 0%;
+transform: translate(-15%, 0);
+transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+z-index: 1;
+}
+
+#menu li
+{
+padding: 10px 0;
+transition-delay: 2s;
+}
+
+#menuToggle input:checked ~ ul
+{
+transform: none;
+display: block;
+}
+
+iframe {
+    width: 92vw;
+    height: 40vh;
+    margin: auto;
+    margin-top: 4vw;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.384);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4vw;
+    margin-right: 4vw;
+}
+
+h1 {
+    margin: 0px;
+    font-family: 'work sans', sans serif;
+}
+
+p {
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 7px;
+    font-family: 'work sans', sans serif;
+    color: #85888C;
+    font-size: 0.95em;
+}
+
+#date {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+#text {
+    color: black;
+    font-size: 1.1em;
+    margin-top: 0px;
+}
+
+#text2 {
+    color: black;
+    font-size: 1.1em;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+#datacinza {
+    font-size: 1em;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+
+#textdata {
+    display: flex;
+    flex-direction: column;
+    align-self: self-end;
+    margin-left: 15px;
+}
+
+#imgdata {
+    display: flex;
+    background-color: rgb(230, 230, 230);
+    border-radius: 50%;
+    margin-bottom: 10px;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+}
+
+#imglocal {
+    display: flex;
+    background-color: rgb(230, 230, 230);
+    border-radius: 50%;
+    margin-bottom: 10px;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+}
+
+#imgcalendar {
+    width: 24px;
+    height: 24px;
+}
+
+#imglocation {
+    width: 24px;
+    height: 24px;
+}
+
+@media screen and (max-width:420px) {
+    #imglocal {
+        width: 53px;
+    }
+}
+
+@media screen and (max-width:394px) {
+    #imglocal {
+        width: 56px;
+    }
+}
+
+@media screen and (min-width:574px) {
+    #text2 {
+        margin-bottom: 15px;
+    }
+}

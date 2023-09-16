@@ -1,0 +1,247 @@
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url("../images/casal.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 35% 75%; /*X - Y*/
+    display: flex;
+    flex-direction: column;
+  }
+
+main {
+    width: 85vw;
+    height: 80.6vh;
+    margin: auto;
+    transition-duration: 0.3s;
+}
+
+#header  {
+  width: 100vw;
+  height: 70px;
+}
+
+#header.rolagem {
+  background-color: #1E1E23;
+  height: 70px;
+  opacity: 100;
+  transition-duration: 0.2s;
+}
+
+p {
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+  color: #1E1E23;
+  opacity:1;
+  font-family: 'work sans', sans serif;
+  font-size: 1.5em;
+  font-weight: 400;
+  transition: 200ms;
+}
+
+a:hover {
+  opacity:0.5;
+}
+
+#presenca {
+  display: flex;
+  width: 100vw;
+  height: 7.5vh;
+  border: none;
+  font-size: 2em;
+  font-family: 'Caveat', cursive;
+  background-color: rgb(253, 215, 236);
+  justify-content: center;
+  align-items: center;
+}
+
+#presenca:hover {
+  opacity: 100;
+}
+
+  #initials {
+    background-color: #1e1e2300;
+    color: white;
+    font-family: 'Caveat', cursive;
+    font-size: 2em;
+    align-self: center;
+    margin-left: 5px;
+  }
+
+  h1 {
+    margin-top: 40px;
+    font-size: 7vw;
+    color: white;
+    text-align: center;
+    font-family: 'Zeyada', cursive;
+  }
+
+  h2 {
+    color: pink;
+    text-align: center;
+    margin: 0px;
+    font-family: 'Caveat', cursive;
+    font-size: 2.7em;
+    height: 32px;
+  }
+
+  #namea {
+    color: white;
+    height: 50px;
+    font-size: 3.5em;
+    font-family: 'Zeyada', cursive;
+  }
+
+  #namec {
+    color: white;
+    font-size: 3.5em;
+    height: 50px;
+    font-family: 'Zeyada', cursive;
+  }
+
+  #names {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  ul {
+    padding: 0;
+    list-style-type: none;
+  }
+
+  header {
+    height: 65px;
+    position: sticky;
+    top:0px;
+  }
+
+  nav {
+    display: flex;
+    background-color: #1e1e2300;
+    height: 65px;
+    justify-content: space-between;
+    transition-duration: 0.2s;
+  }
+  
+  #menuToggle {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: flex-end;
+    margin-right: 5px;
+    top: 25px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  #menuToggle input
+  {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position:absolute;
+    opacity: 0;
+    z-index: 2;
+    transform: translateX(3px) translateY(-4px);
+  }
+
+  #menuToggle input:checked
+  {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+    transform: translateY(-10px);
+  }
+  
+  #menuToggle span
+  {
+    display: flex;
+    width: 29px;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #ffffff;
+    border-radius: 3px;
+    z-index: 1;
+    opacity: 100;
+    transform-origin: 5px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+  
+  #menuToggle span:first-child
+  {
+    transform-origin: 0% 0%;
+  }
+  
+  #menuToggle span:nth-last-child(2)
+  {
+    transform-origin: 0% 100%;
+  }
+  
+  #menuToggle input:checked ~ span
+  {
+    opacity: 1;
+    transform: rotate(45deg) translate(-3px, -1px);
+    background: #36383F;
+  }
+  #menuToggle input:checked ~ span:nth-last-child(3)
+  {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  
+  #menuToggle input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  
+  #menu
+  {
+    display: none;
+    position: absolute;
+    width: 50vw;
+    height: 80vh;
+    box-shadow: 0 0 10px #85888C;
+    margin: -50px -5px 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background-color: #F5F6FA;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-15%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+  
+  #menu li
+  {
+    padding: 10px 0;
+    transition-delay: 2s;
+  }
+  
+  #menuToggle input:checked ~ ul
+  {
+    transform: none;
+    display: block;
+  }
+
+  @media screen and (min-width:768px) {
+    main {
+        width: 60vw;
+        transition-duration: 0.3s;
+    }
+  }
