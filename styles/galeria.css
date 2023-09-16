@@ -167,7 +167,7 @@ display: block;
 }
 
 .img1 {
-    background-image: url("../images/casal.jpg");
+    background-image: url("../casal.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
