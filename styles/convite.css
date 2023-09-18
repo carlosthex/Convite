@@ -1,9 +1,12 @@
-
+html {
+    display: flex;
+    flex-direction: column;
+}
 
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 92.5vh;
     background-image: url("../casal.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -21,7 +24,7 @@ main {
 
 #header  {
   width: 100vw;
-  height: 70px;
+  height: 7.5vh;
 }
 
 #header.rolagem {
